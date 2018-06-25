@@ -40,7 +40,7 @@ set -eux
         -DEMBREE_TUTORIALS=OFF \
         -DEMBREE_ISA_AVX512KNL=OFF \
         -DEMBREE_ISA_AVX512SKX=OFF \
-        -DEMBREE_TASKING_SYSTEM=INTERNAL
+        -DEMBREE_TASKING_SYSTEM=TBB
     make -j install
 )
 
@@ -49,7 +49,7 @@ set -eux
     cmake ../../ospray \
         -DCMAKE_INSTALL_PREFIX=../install \
         -DCMAKE_BUILD_TYPE=Debug \
-        -DOSPRAY_TASKING_SYSTEM=INTERNAL
+        -DOSPRAY_TASKING_SYSTEM=TBB
     make -j install
 )
 
