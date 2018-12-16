@@ -41,7 +41,7 @@ set -eux
     mkcd embree
     # https://github.com/embree/embree/issues/190
     cmake ../../embree \
-        -DCMAKE_BUILD_TYPE=Debug \
+        -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=../install \
         $(echo "
         -DBUILD_SHARED_LIBS=ON
@@ -57,7 +57,7 @@ set -eux
     mkcd ospray
     cmake ../../ospray \
         -DCMAKE_INSTALL_PREFIX=../install \
-        -DCMAKE_BUILD_TYPE=Debug \
+        -DCMAKE_BUILD_TYPE=Release \
         $(echo "
         -DBUILD_SHARED_LIBS=ON
         -DOSPRAY_ENABLE_APPS=OFF
@@ -71,7 +71,7 @@ set -eux
     mkcd vtk
     cmake ../../vtk \
         -DCMAKE_INSTALL_PREFIX=../install \
-        -DCMAKE_BUILD_TYPE=Debug \
+        -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_PREFIX_PATH=../install \
         -DOSPRAY_INSTALL_DIR=1 \
         $(echo "
