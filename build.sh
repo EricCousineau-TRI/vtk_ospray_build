@@ -72,6 +72,8 @@ set -eux
     cmake ../../vtk \
         -DCMAKE_INSTALL_PREFIX=../install \
         -DCMAKE_BUILD_TYPE=Debug \
+        -DCMAKE_PREFIX_PATH=../install \
+        -DOSPRAY_INSTALL_DIR=1 \
         $(echo "
         -DBUILD_SHARED_LIBS=ON
         -DBUILD_TESTING=OFF
