@@ -57,7 +57,7 @@ set -eux
     mkcd ospray
     cmake ../../ospray \
         -DCMAKE_INSTALL_PREFIX=../install \
-        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_BUILD_TYPE=RelWithDebInfo \
         $(echo "
         -DBUILD_SHARED_LIBS=ON
         -DOSPRAY_ENABLE_APPS=OFF
